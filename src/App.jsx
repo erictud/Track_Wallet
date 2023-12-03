@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Landing from "./pages/Landing";
 
 const queryClient = new QueryClient();
 
@@ -8,7 +9,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<p className="text-5xl italic px-5"> page</p>} />
+          <Route path="/" element={<Landing />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
