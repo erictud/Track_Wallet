@@ -4,6 +4,7 @@
 
 @layer base {
   * {
+    /* border: 1px solid red; */
   }
 }
 
@@ -14,5 +15,54 @@
       url("./hero-section-1.jpg");
     background-position: center center;
     background-repeat: no-repeat;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+
+  .input-container input {
+    font-size: 1rem;
+    padding: 0.5rem 0.4rem;
+    padding-left: 0.8rem;
+    border: none;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: all 0.2s linear;
+    border: 1px solid #61a146;
+  }
+
+  .input-container input::placeholder {
+    color: #888; /* Placeholder text color */
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+
+  .input-container label {
+    @apply bg-stone-100;
+    font-size: 1rem;
+    text-transform: capitalize;
+    margin-left: 0.8rem;
+    position: absolute;
+    bottom: 70%;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+
+  .input-container input:not(:focus) ~ label {
+    transform: translateY(50%);
+  }
+
+  .input-container input:focus ~ label {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  .primary-button {
+    @apply bg-mantis-500 px-2 py-1 text-stone-100 rounded-md cursor-pointer hover:bg-mantis-400;
   }
 }

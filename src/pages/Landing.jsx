@@ -180,7 +180,7 @@ export default function Landing() {
         </div>
       </div>
       {/* FOOTER */}
-      <div className="w-[100vw] px-2 py-5 bg-mantis-900 flex items-center justify-between gap-1">
+      <div className=" px-2 py-5 bg-mantis-900 flex items-center justify-between gap-1">
         <div className="flex flex-row items-center gap-1">
           <LogoIcon />
           <h3 className="font-bold text-stone-50">TrackMyWallet</h3>
